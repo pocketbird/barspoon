@@ -1,0 +1,13 @@
+{
+  "name": "barspoon",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-sass": "~0.18.0",
+    "load-grunt-tasks": "~0.1.0",
+    "time-grunt": "~0.1.1"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  }
+}

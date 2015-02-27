@@ -1,0 +1,138 @@
+// For grid demo page only
+$base-font-size: em(16);
+$base-font-family: $helvetica;
+$base-line-height: $base-font-size * 1.5;
+
+$blue: #069DD9;
+$blue--light: #08A8E7;
+$blue--dark: #088DC2;
+$blue--darkest: darken($blue--dark, 5%);
+$gray: #EFEFEF;
+$gray--dark: #232A31;
+$green: #45B267;
+$purple: #6D5BAE;
+$red: #E4282A;
+$teal: #06C8D9;
+$teal--light: #0CDEF0;
+$teal--dark: #09B1BF;
+$white: #FFFFFF;
+$yellow: #F5B725;
+
+$grid-demo-font: $monospace; // Defined in Bourbon.
+$grid-demo-font-size--xs: $base-font-size * 0.65;
+$grid-demo-font-size--sm: $base-font-size * 0.8;
+$grid-demo-font-size--md: $base-font-size * 0.9;
+$grid-demo-font-size--lg: $base-font-size;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $gray;
+  color: $gray--dark;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1, h2 {
+  line-height: $base-line-height;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+  font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+}
+
+h2 {
+  font-size: $base-font-size * 2; // 16 * 2 = 32px
+}
+
+p {
+  margin: 0 0 ($base-line-height * .5);
+}
+
+.grid-demo-heading {
+  font-size: $base-font-size * 1.25;
+
+  @include media($screen-md) {
+    font-size: $base-font-size * 2;
+  }
+}
+
+.grid-demo {
+  background: $teal--dark;
+  color: $white;
+  font-family: $grid-demo-font;
+  font-size: $grid-demo-font-size--xs;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  text-align: center;
+
+  @include media($screen-sm) {
+    font-size: $grid-demo-font-size--sm;
+  }
+  @include media($screen-md) {
+    font-size: $grid-demo-font-size--md;
+  }
+
+  @include media($screen-lg) {
+    font-size: $grid-demo-font-size--lg;
+  }
+}
+
+.grid-demo-row {
+  background: $teal--dark;
+  font-family: $grid-demo-font;
+  font-size: $grid-demo-font-size--xs;
+  text-align: center;
+
+  &:nth-child(2) {
+    background: $blue--darkest;
+  }
+
+  &:nth-child(3) {
+    background: $blue--dark;
+  }
+
+  &:nth-child(4) {
+    background: $blue;
+  }
+
+  &:nth-child(5) {
+    background: $blue--light;
+  }
+
+  @include media($screen-sm) {
+    font-size: $grid-demo-font-size--sm;
+  }
+
+  @include media($screen-md) {
+    font-size: $grid-demo-font-size--md;
+  }
+
+  @include media($screen-lg) {
+    font-size: $grid-demo-font-size--lg;
+  }
+}
+
+.grid-demo-item {
+  background: $teal;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  padding: 1em;
+  font-family: $grid-demo-font;
+  font-size: $grid-demo-font-size--xs;
+  text-align: center;
+
+  @include media($screen-sm) {
+    font-size: $grid-demo-font-size--sm;
+  }
+
+  @include media($screen-md) {
+    font-size: $grid-demo-font-size--md;
+  }
+
+  @include media($screen-lg) {
+    font-size: $grid-demo-font-size--lg;
+  }
+}
